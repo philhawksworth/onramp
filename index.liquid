@@ -1,0 +1,16 @@
+---
+title: Netlify on-ramp
+---
+
+<h1>You deployed a site and this is it!</h1>
+
+<p>
+  hooray!
+</p>
+<p>
+  This is iteration: {{ globalData.iteration }}
+</p>
+
+{% assign instructions = "instructions/step" | append: globalData.iteration %}
+{% render instructions  %}
+
