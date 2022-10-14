@@ -3,16 +3,13 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function() {
 
-  let url = "https://onmramp.netlify.app/data.json";
+  let url = "https://onramp.netlify.app/data.json";
 
   try {
-    let data = await EleventyFetch(url, {
+    return EleventyFetch(url, {
       duration: "10s", 
       type: "json" 
     });
-    return {
-     iteration: data.iteration 
-   } 
   } catch(err) {
     return {
       iteration: 1
