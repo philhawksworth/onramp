@@ -2,24 +2,33 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 
 
 module.exports = async function() {
+  
 
   const rootUrl = process.env.URL || null;
-  let url = "http://localhost:8080"
-  try {
-    if(rootUrl) {
-      url = `${rootUrl}/version.json`;
+
+  const features = [
+    { netlifyFunction: await require("./helpers/checkForFunction.js") },
+    { edgeFunction: false },
+    { redirect: false },
+    { form: false }
+  ];
+
+  if(rootUrl) {
+
+    console.log(`got a url... gonna take a look`);
+    
+    
+    try {
+      url = `${rootUrl}/features.json`;
       return EleventyFetch(url, {
-        duration: "10s", 
+        duration: "0", 
         type: "json" 
       });
-    } else {
-      return {
-        "iteration": 1
-      }
+    } catch(err) {
+      return features
     }
-  } catch(err) {
-    return {
-      "iteration": 1
-    }  
+  } else {
+    console.log(`no url, I'll investigate`);
+    return features;
   }
 };

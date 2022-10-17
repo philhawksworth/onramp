@@ -1,8 +1,6 @@
 ---
-permalink: data.json
+permalink: features.json
 ---
 
-
-{ 
-  "iteration": {{ deployTracking.iteration | plus: 1 }}
-}
+{{ deployTracking | json }}
+  

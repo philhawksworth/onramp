@@ -11,6 +11,26 @@ title: Netlify on-ramp
   This is iteration: {{ deployTracking.iteration }}
 </p>
 
-{% assign instructions = "instructions/step" | append: deployTracking.iteration %}
-{% render instructions  %}
+{% comment %} {% assign instructions = "instructions/step" | append: deployTracking.iteration %}
+{% render instructions  %} {% endcomment %}
 
+
+{{ deployTracking | json }}
+
+
+<ul>
+  <li>
+    {% if deployTracking.netlifyFunction %}
+      Hooray! You've deployed a Netlify function. <a href="/.netlify/functions/hello">You can call it.</a>
+    {% else %}
+      <a href="#">Add a serverless API by deploying a Netlify function.</a>
+    {% endif %}
+  </li>
+  <li>
+    {% if deployTracking.netlifyFunction %}
+      Hooray! You've deployed a redirect rule to give friendlier URLs, <a href="/api/hello">Like this one.</a>
+    {% else %}
+      <a href="#">Take control over your URLs by adding a redirect rule.</a>
+    {% endif %}
+  </li>
+</ul>
