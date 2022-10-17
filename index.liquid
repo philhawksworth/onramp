@@ -8,9 +8,9 @@ title: Netlify on-ramp
   hooray!
 </p>
 <p>
-  This is iteration: {{ globalData.iteration }}
+  This is iteration: {{ deployTracking.iteration }}
 </p>
 
-{% assign instructions = "instructions/step" | append: globalData.iteration %}
+{% assign instructions = "instructions/step" | append: deployTracking.iteration %}
 {% render instructions  %}
 
