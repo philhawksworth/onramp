@@ -3,7 +3,7 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function() {
 
-  const rootUrl = process.env.url || null;
+  const rootUrl = process.env.URL || null;
   let url = "http://localhost:8080"
   try {
     if(rootUrl) {
