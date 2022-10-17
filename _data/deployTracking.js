@@ -7,7 +7,7 @@ module.exports = async function() {
   let url = "http://localhost:8080"
   try {
     if(rootUrl) {
-      url = `${url}/version.json`;
+      url = `${rootUrl}/version.json`;
       return EleventyFetch(url, {
         duration: "10s", 
         type: "json" 
