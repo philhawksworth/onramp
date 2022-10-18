@@ -1,5 +1,14 @@
-# example netlify.toml
 [build]
   command = "npx eleventy"
   publish = "dist"
 
+[dev]
+  command = "npx eleventy --watch"
+  publish = "dist"
+
+
+
+
+[[edge_functions]]
+  path = "/"
+  function = "feature-checks"
