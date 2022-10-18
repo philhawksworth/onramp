@@ -3,7 +3,7 @@ const HTMLConfirmation = `You've added a form! Netlify will now accept submissio
 
 export default async function hasForms(context) {
 
-  const testURL = `${context.site.url}/my-form`;
+  const testURL = `${context.site.url}`;
   console.log(`Checking for a form which posts to ${testURL}`);
   
   const call = await fetch(testURL, {
