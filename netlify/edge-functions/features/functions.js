@@ -1,4 +1,3 @@
-
 const HTMLConfirmation = `A Netlify Functions has been deployed! Call it at <a href="/.netlify/functions/hello">/.netlify/functions/hello</a>`;
 
 

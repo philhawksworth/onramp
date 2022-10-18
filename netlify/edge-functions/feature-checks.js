@@ -7,20 +7,31 @@ import hasForms from "./features/forms.js";
 
 
 export default async (request, context) => {
+
+  // get the pending HTTP response ready to make updates to it
+  const response = await context.next();
+
+  // We're only going to to test and update things this is running on Netlify
+  if(await context.ip === "127.0.0.1"){
+    return;
+  }
   
+  
+  // Test for the presence of various features, and prepare any
+  // conformation messages we might wish to sub in for the existing content.
   const functionMessage = await hasFunctions(context);
   const redirectsMessage = await hasRedirects(context);
   const formsMessage = await hasForms(context);
 
-  // get the next HTTP response in the chain
-  const response = await context.next();
   
-  // Update the response by injecting some helpful status messages and instructions
+
+  // Update the response by injecting some status messages
   return new HTMLRewriter()
     .on("#feature-functions", {
       element(element) {
         if(functionMessage) {
           element.setInnerContent(functionMessage, { html: true });
+          // element.ar
         }
       }
     })

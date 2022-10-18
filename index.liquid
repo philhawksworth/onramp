@@ -6,30 +6,11 @@ title: Netlify on-ramp
 
 
 <ul>
-  <li id="feature-functions">Learn <a href="#">how to deploy a serverless API with Netlify Functions</a></li>
+  <li id="feature-functions">{% render 'instructions/functions' %}</li>
   <li id="feature-redirects">Learn <a href="#">how to add a redirects with the Netlify Redirects API</a></li>
-  <li id="feature-forms">Learn <a href="#">how to add a form to your site which Netlify can process for you</a></li>
+  <li id="feature-forms">{% render 'instructions/forms' %}</li>
 </ul>
 
 
 
-<form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+
