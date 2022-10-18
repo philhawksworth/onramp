@@ -1,10 +1,8 @@
 const HTMLConfirmation = `Redirects deployed! Now you can call your serverless API at <a href="/api/hello">/api/hello</a`;
 
 
-export default async function hasFunctions() {
+export default async function hasFunctions(context) {
 
-  console.log(`checking for redirects`);
-  
   const testURL = `${context.site.url}/api/hello`;
   console.log(`Checking for a redirect to ${testURL}`);
   
