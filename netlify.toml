@@ -7,8 +7,14 @@
   publish = "dist"
 
 
+[[redirects]]
+  from = "/api/hello"
+  to = "/.netlify/functions/hello"
+  response = 200
 
 
 [[edge_functions]]
   path = "/"
   function = "feature-checks"
+
+
