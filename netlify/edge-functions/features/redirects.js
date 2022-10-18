@@ -1,4 +1,4 @@
-const HTMLConfirmation = `Redirects deployed! Now you can call your serverless API at <a href="/api/hello">/api/hello</a`;
+const HTMLConfirmation = `Redirects deployed! Now you can call your serverless API at <a href="/api/hello">/api/hello</a>`;
 
 
 export default async function hasFunctions(context) {
