@@ -33,7 +33,7 @@ export default async (request, context) => {
     })
     .on("#feature-forms", {
       element(element) {
-        if(redirectsMessage) {
+        if(formsMessage) {
           element.setInnerContent(formsMessage, { html: true });
         }
       }
