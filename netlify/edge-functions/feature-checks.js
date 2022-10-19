@@ -12,18 +12,18 @@ export default async (request, context) => {
   const response = await context.next();
 
   // We're only going to to test and update things this is running on Netlify
-  if(await context.ip === "127.0.0.1"){
-    // return;
-  }
+  // if(await context.ip === "127.0.0.1"){
+  //   return;
+  // }
   
   
   // Test for the presence of various features, and prepare any
   // confirmation messages we might wish to sub in for the existing content.
   const functionMessage = await hasFunctions(context);
   const redirectsMessage = await hasRedirects(context);
-  const formsMessage = await hasForms(context);
+  // const formsMessage = await hasForms(context);
 
-  
+
 
   // Update the response by injecting some status messages
   let classes;
@@ -31,26 +31,24 @@ export default async (request, context) => {
     .on("#feature-functions", {
       element(element) {
         if(functionMessage) {
-          classes = `${element.getAttribute("class")} feature-deployed`;
-          element.setAttribute("class", classList);
+          element.setAttribute("class", "card feature-deployed");
         }
       }
     })
     .on("#feature-redirects", {
       element(element) {
         if(redirectsMessage) {
-          classes = `${element.getAttribute("class")} feature-deployed`;
-          element.setAttribute("class", classList);
+          element.setAttribute("class", "card feature-deployed");
         }
       }
     })
-    .on("#feature-forms", {
-      element(element) {
-        if(formsMessage) {
-          classes = `${element.getAttribute("class")} feature-deployed`;
-          element.setAttribute("class", classList);
-        }
-      }
-    })
+    // .on("#feature-forms", {
+    //   element(element) {
+    //     if(formsMessage) {
+    //       // classes = `${element.getAttribute("class")} feature-deployed`;
+    //       element.setAttribute("class", "card feature-deployed");
+    //     }
+    //   }
+    // })
     .transform(response);
 };
