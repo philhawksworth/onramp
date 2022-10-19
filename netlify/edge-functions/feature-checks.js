@@ -13,7 +13,7 @@ export default async (request, context) => {
 
   // We're only going to to test and update things this is running on Netlify
   if(await context.ip === "127.0.0.1"){
-    return;
+    // return;
   }
   
   
@@ -31,7 +31,8 @@ export default async (request, context) => {
       element(element) {
         if(functionMessage) {
           // element.setInnerContent(functionMessage, { html: true });
-          element.setAttribute("class", "feature-deployed");
+          classList = `${element.getAttribute("class")} feature-deployed`;
+          element.setAttribute("class", classList);
         }
       }
     })
@@ -39,7 +40,8 @@ export default async (request, context) => {
       element(element) {
         if(redirectsMessage) {
           // element.setInnerContent(redirectsMessage, { html: true });
-          element.setAttribute("class", "feature-deployed");
+          classList = `${element.getAttribute("class")} feature-deployed`;
+          element.setAttribute("class", classList);
         }
       }
     })
@@ -47,7 +49,8 @@ export default async (request, context) => {
       element(element) {
         if(formsMessage) {
           // element.setInnerContent(formsMessage, { html: true });
-          element.setAttribute("class", "feature-deployed");
+          classList = `${element.getAttribute("class")} feature-deployed`;
+          element.setAttribute("class", classList);
         }
       }
     })

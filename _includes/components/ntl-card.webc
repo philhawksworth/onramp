@@ -17,12 +17,12 @@
     margin: 0;
   }
   
-  .complete {
+  .feature-deployed {
     background: rgb(4,52,74);
     background: linear-gradient(120deg, rgba(4,52,74,1) 0%, rgba(15,98,93,1) 66%, rgba(145,150,116,1) 100%);
   }
 
-  .complete h1::after {
+  .feature-deployed h1::after {
     content: " ✓ Deployed";
     background-color: #fff;
     color: rgb(4,52,74);
@@ -51,7 +51,7 @@
 </style>
 
 <template webc:type="11ty">
-  <div class="card complete" :id="id">
+  <div class="card" :id="id">
     <h1 @html="cardtitle"></h1>
     <div class="description" @html="text"></div>
     <a :href="url" @html="cta"></a>
