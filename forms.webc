@@ -1,4 +1,16 @@
-Learn <a href="#">how to add a form to your site which Netlify can process for you</a>
+---
+title: Adding form handling
+layout: layouts/base.webc
+---
+
+<p>
+  Netlify can provide automatic handling of form submissions. The simplest way to do this is by adding a form element to your HTML and including a `netlify` or `data-netlify` attribute.
+</p>
+
+<h2>Try it</h2>
+<p>
+  If you paste the HTML below into the home page (`index.liquid`) of this site and deploy it, Netlify will detect it and create an API end point to handle all the 
+</p>
 
 <pre>
 <code>

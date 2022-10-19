@@ -1,0 +1,59 @@
+<style webc:scoped>
+
+  .card {
+    font-size: 0.9rem;
+    background: rgb(0,4,147);
+    background: linear-gradient(90deg, rgba(0,4,147,1) 0%, rgba(65,122,190,1) 63%, rgba(93,212,218,1) 100%);
+    color:#fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 8%), 0 8px 24px rgb(51 55 59 / 4%), 0 6px 30px rgb(51 55 59 / 4%);
+    padding: 2rem;
+    margin:0 1rem 1rem;
+  }
+
+  
+  h1 {
+    color: #fff;
+    margin: 0;
+  }
+  
+  .complete {
+    background: rgb(4,52,74);
+    background: linear-gradient(120deg, rgba(4,52,74,1) 0%, rgba(15,98,93,1) 66%, rgba(145,150,116,1) 100%);
+  }
+
+  .complete h1::after {
+    content: " ✓ Deployed";
+    background-color: #fff;
+    color: rgb(4,52,74);
+    font-size: 0.5em;
+    font-weight: 600;
+    border-radius: 3px;
+    margin-left: 1em;
+    padding: 0.2em 1em 0.2em 0.5em;
+  }
+
+
+  .description {
+    margin: 1rem 0 0.5rem;
+  }
+ 
+  a:link,
+  a:visited {
+    color: #eee;
+    font-weight: 600;
+  }
+  a:hover,
+  a:focus {
+    color: #fff;
+  }
+
+</style>
+
+<template webc:type="11ty">
+  <div class="card complete" :id="id">
+    <h1 @html="cardtitle"></h1>
+    <div class="description" @html="text"></div>
+    <a :href="url" @html="cta"></a>
+  </div>
+</template>

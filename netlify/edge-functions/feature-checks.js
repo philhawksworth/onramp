@@ -18,7 +18,7 @@ export default async (request, context) => {
   
   
   // Test for the presence of various features, and prepare any
-  // conformation messages we might wish to sub in for the existing content.
+  // confirmation messages we might wish to sub in for the existing content.
   const functionMessage = await hasFunctions(context);
   const redirectsMessage = await hasRedirects(context);
   const formsMessage = await hasForms(context);
@@ -30,22 +30,24 @@ export default async (request, context) => {
     .on("#feature-functions", {
       element(element) {
         if(functionMessage) {
-          element.setInnerContent(functionMessage, { html: true });
-          // element.ar
+          // element.setInnerContent(functionMessage, { html: true });
+          element.setAttribute("class", "feature-deployed");
         }
       }
     })
     .on("#feature-redirects", {
       element(element) {
         if(redirectsMessage) {
-          element.setInnerContent(redirectsMessage, { html: true });
+          // element.setInnerContent(redirectsMessage, { html: true });
+          element.setAttribute("class", "feature-deployed");
         }
       }
     })
     .on("#feature-forms", {
       element(element) {
         if(formsMessage) {
-          element.setInnerContent(formsMessage, { html: true });
+          // element.setInnerContent(formsMessage, { html: true });
+          element.setAttribute("class", "feature-deployed");
         }
       }
     })

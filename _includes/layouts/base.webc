@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title @html="this.title"></title>
+      <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet" />
+  <style>
+
+    :root {
+      --color-bg: #ffffff;
+      --color-fg: #151a1e;
+      --color-gray-L300: #e7eaed;
+      --color-gray-L800: #151a1e;
+      --color-teal-T900: #054861;
+      --color-teal-T600: #30c8c9;
+      --color-blue-B500: #2250f4;
+      --color-blue-B800: #112caf;
+      --font-family-main: Mulish, sans-serif;
+      --font-weight-normal: 300;
+      --font-weight-bold: 900;
+      --max-width-main: 800px;
+      --box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
+    }
+
+
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Set core body defaults */
+    body {
+      min-height: 100vh;
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+      background-color: var(--color-bg);
+      color: var(--color-fg);
+      line-height: 1.5;
+      font-family: var(--font-family-main);
+      font-weight: var(--font-weight-normal);
+      font-size: 19px;
+    }
+
+  </style>
+  <style @html="this.getCSS(page.url)"></style>
+</head>
+<body>
+  <page-header></page-header>
+  <main @html="this.content"></main>
+</body>
+</html>

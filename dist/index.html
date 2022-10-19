@@ -1,40 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Netlify on-ramp</title>
+      <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&amp;display=swap" rel="stylesheet">
+  <style>
 
-<h1>You deployed a site and this is it</h1>
-
-
-<ul>
-  <li id="feature-functions">Learn <a href="#">how to deploy a serverless API with Netlify Functions</a>
-</li>
-  <li id="feature-redirects">Learn <a href="#">how to add a redirects with the Netlify Redirects API</a></li>
-  <li id="feature-forms">Learn <a href="#">how to add a form to your site which Netlify can process for you</a>
-
-<pre>
-<code>
-&lt;form name=&quot;contact&quot; method=&quot;POST&quot; data-netlify=&quot;true&quot;&gt;
-  &lt;p&gt;
-    &lt;label&gt;Your Name: &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label&gt;Your Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label&gt;Your Role: &lt;select name=&quot;role[]&quot; multiple&gt;
-      &lt;option value=&quot;leader&quot;&gt;Leader&lt;/option&gt;
-      &lt;option value=&quot;follower&quot;&gt;Follower&lt;/option&gt;
-    &lt;/select&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label&gt;Message: &lt;textarea name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
-  &lt;/p&gt;
-&lt;/form&gt;
-</code>
-</pre>
-</li>
-</ul>
+    :root {
+      --color-bg: #ffffff;
+      --color-fg: #151a1e;
+      --color-gray-L300: #e7eaed;
+      --color-gray-L800: #151a1e;
+      --color-teal-T900: #054861;
+      --color-teal-T600: #30c8c9;
+      --color-blue-B500: #2250f4;
+      --color-blue-B800: #112caf;
+      --font-family-main: Mulish, sans-serif;
+      --font-weight-normal: 300;
+      --font-weight-bold: 900;
+      --max-width-main: 800px;
+      --box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
+    }
 
 
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Set core body defaults */
+    body {
+      min-height: 100vh;
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+      background-color: var(--color-bg);
+      color: var(--color-fg);
+      line-height: 1.5;
+      font-family: var(--font-family-main);
+      font-weight: var(--font-weight-normal);
+      font-size: 19px;
+    }
+
+  </style>
+  <style>.way0jcpzg .card{font-size:0.9rem;background:rgb(0,4,147);background:linear-gradient(90deg,rgba(0,4,147,1) 0%,rgba(65,122,190,1) 63%,rgba(93,212,218,1) 100%);color:#fff;border-radius:8px;box-shadow:0 4px 8px rgb(0 0 0/8%),0 8px 24px rgb(51 55 59/4%),0 6px 30px rgb(51 55 59/4%);padding:2rem;margin:0 1rem 1rem}.way0jcpzg h1{color:#fff;margin:0}.way0jcpzg .complete{background:rgb(4,52,74);background:linear-gradient(120deg,rgba(4,52,74,1) 0%,rgba(15,98,93,1) 66%,rgba(145,150,116,1) 100%)}.way0jcpzg .complete h1::after{content:" ✓ Deployed";background-color:#fff;color:rgb(4,52,74);font-size:0.5em;font-weight:600;border-radius:3px;margin-left:1em;padding:0.2em 1em 0.2em 0.5em}.way0jcpzg .description{margin:1rem 0 0.5rem}.way0jcpzg a:link,.way0jcpzg a:visited{color:#eee;font-weight:600}.way0jcpzg a:hover,.way0jcpzg a:focus{color:#fff}</style>
+</head>
+<body>
+  
+  <header>
+    <h1>Netlify on-ramp</h1>
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </header>
 
 
+  <main><ntl-card class="way0jcpzg">
+
+<div class="card complete" id="feature-redirects">
+    <h1>Netlify Functions</h1>
+    <div class="description">Create a serverless API with Netlify Functions</div>
+    <a href="/functions/">Add your first serverless function</a>
+  </div>
+
+</ntl-card>
+
+<ntl-card class="way0jcpzg">
+
+<div class="card complete" id="feature-redirects">
+    <h1>Redirects</h1>
+    <div class="description">Control your URLs with the Redirects API</div>
+    <a href="/redirects/">Create your first redirect.</a>
+  </div>
+
+</ntl-card>
+
+<ntl-card class="way0jcpzg">
+
+<div class="card complete" id="feature-forms">
+    <h1>Netlify Forms</h1>
+    <div class="description">Use Netlify to automatically process your foprm submissions</div>
+    <a href="/functions/">Add a form ands start capturing submissions</a>
+  </div>
+
+</ntl-card>
+</main>
+
+
+</body>
+</html>

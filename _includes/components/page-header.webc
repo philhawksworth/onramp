@@ -1,0 +1,8 @@
+<template webc:type="11ty" 11ty:type="liquid">
+  <header>
+    <h1>{{ title }}</h1>
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </header>
+</template>

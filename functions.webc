@@ -1,0 +1,36 @@
+---
+title: Netlify Functions
+layout: layouts/base.webc
+---
+
+<h1>
+  Create a serverless API with Netlify Functions
+</h1>
+
+<h2>Try it</h2>
+<p>
+  Netlify can autiomatically package and deploy the serverless functions youi include in your porject.
+</p>
+<ol>
+  <li>Add a folder to contain your serverless functions in your porject at <code>/netlify/functions</code></li>
+  <li>Add a file called <code>hello.js</code> to your new functions folder</li>
+  <li>Paste the JavaScript below into your new function file</li>
+  <li>Commit your changes and push your code to trigger a new deploy</li>
+</ol>
+
+<pre>
+<code>
+
+exports.handler = async (event, context) => {
+  const {
+    name = "World"
+  } = event.queryStringParameters;
+
+  return {
+    statusCode: 200,
+    body: `Hello, ${name}`
+  };
+};
+
+</code>
+</pre>
