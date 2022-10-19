@@ -44,13 +44,22 @@
       font-family: var(--font-family-main);
       font-weight: var(--font-weight-normal);
       font-size: 19px;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin:0 auto;
+      text-align: left;
     }
 
   </style>
   <style @html="this.getCSS(page.url)"></style>
 </head>
 <body>
-  <page-header></page-header>
-  <main @html="this.content"></main>
+  <div class="content">
+    <page-header></page-header>
+    <main @html="this.content"></main>
+  </div>
 </body>
 </html>
