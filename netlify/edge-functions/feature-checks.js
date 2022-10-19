@@ -26,12 +26,12 @@ export default async (request, context) => {
   
 
   // Update the response by injecting some status messages
+  let classes;
   return new HTMLRewriter()
     .on("#feature-functions", {
       element(element) {
         if(functionMessage) {
-          // element.setInnerContent(functionMessage, { html: true });
-          classList = `${element.getAttribute("class")} feature-deployed`;
+          classes = `${element.getAttribute("class")} feature-deployed`;
           element.setAttribute("class", classList);
         }
       }
@@ -39,8 +39,7 @@ export default async (request, context) => {
     .on("#feature-redirects", {
       element(element) {
         if(redirectsMessage) {
-          // element.setInnerContent(redirectsMessage, { html: true });
-          classList = `${element.getAttribute("class")} feature-deployed`;
+          classes = `${element.getAttribute("class")} feature-deployed`;
           element.setAttribute("class", classList);
         }
       }
@@ -48,8 +47,7 @@ export default async (request, context) => {
     .on("#feature-forms", {
       element(element) {
         if(formsMessage) {
-          // element.setInnerContent(formsMessage, { html: true });
-          classList = `${element.getAttribute("class")} feature-deployed`;
+          classes = `${element.getAttribute("class")} feature-deployed`;
           element.setAttribute("class", classList);
         }
       }

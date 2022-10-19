@@ -6,7 +6,7 @@ layout: layouts/base.webc
 <ntl-card
   @cardtitle = "Netlify Functions"
   @text = "Create a serverless API with Netlify Functions"
-  @id = "feature-redirects"
+  @id = "feature-functions"
   @url = "/functions/"
   @cta = "Add your first serverless function"
 ></ntl-card>
