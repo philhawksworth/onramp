@@ -1,4 +1,4 @@
-// const HTMLConfirmation = `You've added a form! Netlify will now accept submissions to it.`;
+const HTMLConfirmation = `<p>You've added a form! Netlify will now accept submissions to it.</p>`;
 
 export default async function hasForms(context) {
 
@@ -9,7 +9,7 @@ export default async function hasForms(context) {
     method: "POST"
   });
   if (call.status !== 404) {
-    return true;
+    return HTMLConfirmation;
   }
 }
 
