@@ -31,14 +31,15 @@
 
   .feature-deployed h1::after {
     content: "✓ Deployed";
-    background-color: #fff;
-    color: rgb(4,52,74);
+    background-color: #eee;
+    color:#151a1e;
     font-size: 0.5em;
     font-weight: 600;
     border-radius: 3px;
     margin-left: 1em;
     padding: 0.2em 1em 0.2em 0.5em;
   }
+
 
 
   .description {

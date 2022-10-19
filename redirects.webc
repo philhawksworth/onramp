@@ -4,33 +4,23 @@ layout: layouts/base.webc
 ---
 
 <h1>
-  Take control opf your URLs with Netlify Redirects
+  Take control of your URLs with Netlify Redirects
 </h1>
 
 <h2>Try it</h2>
 <p>
-  Netlify can autiomatically package and deploy the serverless functions youi include in your porject.
+  Netlify allows you to shape how HTTP requests to your sites are routed. By adding configuration to your project you can define redirects, rewrites and proxying rules.
 </p>
 <ol>
-  <li>Add a folder to contain your serverless functions in your porject at <code>/netlify/functions</code></li>
-  <li>Add a file called <code>hello.js</code> to your new functions folder</li>
-  <li>Paste the JavaScript below into your new function file</li>
+  <li>Add the <code>toml</code> config code below to your <code>netlify.toml</code> file</li>
   <li>Commit your changes and push your code to trigger a new deploy</li>
 </ol>
 
 <pre>
 <code>
-
-exports.handler = async (event, context) => {
-  const {
-    name = "World"
-  } = event.queryStringParameters;
-
-  return {
-    statusCode: 200,
-    body: `Hello, ${name}`
-  };
-};
-
+[[redirects]]
+  from = "/api/hello"
+  to = "/.netlify/functions/hello"
+  status = 200
 </code>
 </pre>
