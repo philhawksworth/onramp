@@ -38,8 +38,8 @@
       min-height: 100vh;
       text-rendering: optimizeSpeed;
       line-height: 1.5;
-      background-color: var(--color-bg);
-      color: var(--color-fg);
+      background-color: var(--color-fg);
+      color: var(--color-bg);
       line-height: 1.5;
       font-family: var(--font-family-main);
       font-weight: var(--font-weight-normal);

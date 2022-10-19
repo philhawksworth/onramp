@@ -12,9 +12,9 @@ export default async (request, context) => {
   const response = await context.next();
 
   // We're only going to to test and update things this is running on Netlify
-  if(await context.ip === "127.0.0.1"){
-    return;
-  }
+  // if(await context.ip === "127.0.0.1"){
+  //   return;
+  // }
   
   
   // Test for the presence of various features, and prepare any
@@ -30,6 +30,7 @@ export default async (request, context) => {
     .on("#feature-functions", {
       element(element) {
         if(functionMessage) {
+          element.append(functionMessage, {html: true})
           element.setAttribute("class", "card feature-deployed");
         }
       }
@@ -37,6 +38,7 @@ export default async (request, context) => {
     .on("#feature-redirects", {
       element(element) {
         if(redirectsMessage) {
+          element.append(redirectsMessage, {html: true})
           element.setAttribute("class", "card feature-deployed");
         }
       }
@@ -44,6 +46,7 @@ export default async (request, context) => {
     .on("#feature-forms", {
       element(element) {
         if(formsMessage) {
+          element.append(formsMessage, {html: true})
           element.setAttribute("class", "card feature-deployed");
         }
       }

@@ -1,8 +1,40 @@
+
+<style webc:scoped>
+  header {
+    text-align: center;
+  }
+  
+  h1 a {
+    color:#fff;
+    font-size: 1.8rem;
+  }
+  
+  p {
+    max-width: 400px;
+    margin: 0 auto 4rem;
+    color:#ddd;
+  }
+  
+  p.strapline {
+    color:#fff;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 3rem auto;
+    max-width: 100%;
+  }
+
+
+</style>
+
 <template webc:type="11ty" 11ty:type="liquid">
   <header>
-    <h1>{{ title }}</h1>
-    <ul>
-      <li><a href="/">Home</a></li>
-    </ul>
+    <h1><a href="/">Netlify on-ramp</a></h1>
+    <p class="strapline">
+      {{ title }}
+    </p>
+    <p>
+      Explore some of Netlify's features by committing a few changes to this project.
+    </p>
   </header>
 </template>

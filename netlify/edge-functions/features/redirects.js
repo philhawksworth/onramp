@@ -1,4 +1,4 @@
-// const HTMLConfirmation = `Redirects deployed! Now you can call your serverless API at <a href="/api/hello">/api/hello</a>`;
+const HTMLConfirmation = `<p>Redirects deployed! Now you can call your serverless API at <a href="/api/hello">/api/hello</a></p>`;
 
 
 export default async function hasFunctions(context) {
@@ -8,7 +8,7 @@ export default async function hasFunctions(context) {
   
   const call = await fetch(testURL);
   if (call.status !== 404) {
-    return true;
+    return HTMLConfirmation;
   }
 }
 

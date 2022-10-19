@@ -1,10 +1,10 @@
 ---
-title: Netlify on-ramp
+title: Push it real good
 layout: layouts/base.webc
 ---
 
 <ntl-card
-  @cardtitle = "Netlify Functions"
+  @cardtitle = "1. Netlify Functions"
   @text = "Create a serverless API with Netlify Functions"
   @id = "feature-functions"
   @url = "/functions/"
@@ -12,7 +12,7 @@ layout: layouts/base.webc
 ></ntl-card>
 
 <ntl-card
-  @cardtitle = "Redirects"
+  @cardtitle = "2. Redirects"
   @text = "Control your URLs with the Redirects API"
   @id = "feature-redirects"
   @url = "/redirects/"
@@ -20,7 +20,7 @@ layout: layouts/base.webc
 ></ntl-card>
 
 <ntl-card
-  @cardtitle = "Netlify Forms"
+  @cardtitle = "3. Netlify Forms"
   @text = "Use Netlify to automatically process your foprm submissions"
   @id = "feature-forms"
   @url = "/functions/"

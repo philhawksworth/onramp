@@ -1,4 +1,4 @@
-// const HTMLConfirmation = `A Netlify Functions has been deployed! Call it at <a href="/.netlify/functions/hello">/.netlify/functions/hello</a>`;
+const HTMLConfirmation = `<p>A Netlify Functions has been deployed! Call it at <a href="/.netlify/functions/hello">/.netlify/functions/hello</a></p>`;
 
 
 export default async function hasFunctions(context) {
@@ -8,7 +8,7 @@ export default async function hasFunctions(context) {
   
   const call = await fetch(functionURL);
   if (call.status !== 404) {
-    return true;
+    return HTMLConfirmation;
   }
 }
 

@@ -1,29 +1,36 @@
 <style webc:scoped>
 
+
   .card {
     font-size: 0.9rem;
-    background: rgb(0,4,147);
-    background: linear-gradient(90deg, rgba(0,4,147,1) 0%, rgba(65,122,190,1) 63%, rgba(93,212,218,1) 100%);
-    color:#fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 8%), 0 8px 24px rgb(51 55 59 / 4%), 0 6px 30px rgb(51 55 59 / 4%);
+    box-shadow: -2px -2px 12px #1ae6f4a3, 2px 2px 12px #dc41ffa3;
     padding: 2rem;
-    margin:0 1rem 1rem;
+    margin:3rem 0;
+    border-radius: 8px;
+    color:var(--color-bg);
+    background:var(--color-fg);
+  }
+  
+  .card:hover {
+    --color-bg: #000;
+    --color-fg: #fff;
+    background: var(--color-fg);
+    color: var(--color-bg);
+    box-shadow: 0 0 12px #ffffffcc;
   }
 
   
   h1 {
-    color: #fff;
+    color:var(--color-bg);
     margin: 0;
   }
   
   .feature-deployed {
-    background: rgb(4,52,74);
-    background: linear-gradient(120deg, rgba(4,52,74,1) 0%, rgba(15,98,93,1) 66%, rgba(145,150,116,1) 100%);
+    box-shadow: -2px -2px 12px #cff68dbd, 2px 2px 12px #029b42a3;
   }
 
   .feature-deployed h1::after {
-    content: " ✓ Deployed";
+    content: "✓ Deployed";
     background-color: #fff;
     color: rgb(4,52,74);
     font-size: 0.5em;
@@ -40,12 +47,12 @@
  
   a:link,
   a:visited {
-    color: #eee;
+    color: var(--color-bg);
     font-weight: 600;
   }
   a:hover,
   a:focus {
-    color: #fff;
+    color: var(--color-blue-B500);
   }
 
 </style>
