@@ -3,6 +3,7 @@ import { HTMLRewriter } from "https://ghuc.cc/worker-tools/html-rewriter/index.t
 import hasFunctions from "./features/functions.js";
 import hasRedirects from "./features/redirects.js";
 import hasForms from "./features/forms.js";
+import hasBranches from "./features/branchdeploy.js";
 import hasSplits from "./features/splittest.js";
 
 
@@ -17,12 +18,16 @@ export default async (request, context) => {
   //   return;
   // }
   
+  console.log({context});
+  
+
   
   // Test for the presence of various features, and prepare any
   // confirmation messages we might wish to sub in for the existing content.
   const functionMessage = await hasFunctions(context);
   const redirectsMessage = await hasRedirects(context);
   const formsMessage = await hasForms(context);
+  const branchMessage = await hasBranches(context);
   const splitsMessage = await hasSplits(context);
 
 
@@ -49,6 +54,14 @@ export default async (request, context) => {
       element(element) {
         if(formsMessage) {
           element.append(formsMessage, {html: true})
+          element.setAttribute("class", "card feature-deployed");
+        }
+      }
+    })
+    .on("#feature-branch-deploys", {
+      element(element) {
+        if(branchMessage) {
+          element.append(branchMessage, {html: true})
           element.setAttribute("class", "card feature-deployed");
         }
       }
