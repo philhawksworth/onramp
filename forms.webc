@@ -3,36 +3,33 @@ title: Adding form handling
 layout: layouts/base.webc
 ---
 
-<p>
-  Netlify can provide automatic handling of form submissions. The simplest way to do this is by adding a form element to your HTML and including a `netlify` or `data-netlify` attribute.
-</p>
 
-<h2>Try it</h2>
-<p>
-  If you paste the HTML below into the home page (`index.liquid`) of this site and deploy it, Netlify will detect it and create an API end point to handle all the 
-</p>
+<template webc:type="11ty" 11ty:type="liquid,md">
+  
+# Handle form POST requests without handling a server
 
-<pre>
-<code>
-&lt;form name=&quot;contact&quot; method=&quot;POST&quot; data-netlify=&quot;true&quot;&gt;
-  &lt;p&gt;
-    &lt;label&gt;Your Name: &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label&gt;Your Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label&gt;Your Role: &lt;select name=&quot;role[]&quot; multiple&gt;
-      &lt;option value=&quot;leader&quot;&gt;Leader&lt;/option&gt;
-      &lt;option value=&quot;follower&quot;&gt;Follower&lt;/option&gt;
-    &lt;/select&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label&gt;Message: &lt;textarea name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
-  &lt;/p&gt;
-&lt;/form&gt;
-</code>
-</pre>
+Netlify can provide automatic handling of form submissions. The simplest way to do this is by adding a `form` element to your HTML and including a `netlify` or `data-netlify` attribute.
+
+## Try it
+
+1. If you paste the HTML below into the home page (`index.liquid`) of this site,
+1. Commit your changes and push your code to trigger a new deploy
+
+Netlify will detect it and create an API end point to handle all the submissions and collect them for you to access through the admin view or programmatically vai the Netlify API
+
+
+```
+<form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" netlify/></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+```
+
+</template>
