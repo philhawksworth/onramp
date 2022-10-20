@@ -53,7 +53,7 @@ export default async (request, context) => {
         }
       }
     })
-    .on("#feature-split-tests", {
+    .on("#feature-split-testing", {
       element(element) {
         if(splitsMessage) {
           element.append(splitsMessage, {html: true})
