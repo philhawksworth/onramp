@@ -30,12 +30,14 @@
 
 
 
-
+<template webc:type="11ty" 11ty:type="liquid,md">
 <footer>
-  <ul>
-    <li><a href="https://onramp.netlify.app">Get your own version</a> of this site to quickly ramp up on <a href="https://www.netlify.com/">Netlify</a></li>
-    <li>Explore the <a href="https://github.com/philhawksworth/onramp">source code on GitHub</a></li>
-  </ul>
+
+- [Get your own version](https://onramp.netlify.app) of this site to quickly ramp up on [Netlify](https://www.netlify.com/)
+- This site is powered by Netlify and this [GitHub repo]({{ site.repo }})
+- You can also explore the [original repo](https://github.com/philhawksworth/onramp) it was cloned from.
+
 </footer>
+</template>
 
 
