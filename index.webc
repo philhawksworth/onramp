@@ -27,16 +27,3 @@ layout: layouts/base.webc
   @cta = "Add a form ands start capturing submissions"
 ></ntl-card>
 
-
-
-<form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" netlify/></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>

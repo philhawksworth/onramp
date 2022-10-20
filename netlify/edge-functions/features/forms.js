@@ -2,7 +2,7 @@ const HTMLConfirmation = `<p>You've added a form! Netlify will now accept submis
 
 export default async function hasForms(context) {
 
-  const testURL = `${context.site.url}`;
+  const testURL = `${context.site.url}/forms/`;
   console.log(`Checking for a form which posts to ${testURL}`);
   
   // 2 second timeout:

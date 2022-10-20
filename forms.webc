@@ -12,14 +12,14 @@ Netlify can provide automatic handling of form submissions. The simplest way to 
 
 ## Try it
 
-1. If you paste the HTML below into the home page (`index.liquid`) of this site,
+1. If you paste the HTML below into the code for this page ([forms.webc]({{ site.repo}}/blob/main/forms.webc)) of this site,
 1. Commit your changes and push your code to trigger a new deploy
 
 Netlify will detect it and create an API end point to handle all the submissions and collect them for you to access through the admin view or programmatically vai the Netlify API
 
 
 ```
-<form name="contact" netlify>
+<form name="contact" method="post" netlify>
   <p>
     <label>Name <input type="text" name="name" netlify/></label>
   </p>
@@ -31,5 +31,19 @@ Netlify will detect it and create an API end point to handle all the submissions
   </p>
 </form>
 ```
+
+
+<form name="contact" method="post" netlify>
+  <p>
+    <label>Name <input type="text" name="name" netlify/></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
 
 </template>
