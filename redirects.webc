@@ -3,24 +3,25 @@ title: Netlify Redirects
 layout: layouts/base.webc
 ---
 
-<h1>
-  Take control of your URLs with Netlify Redirects
-</h1>
+<template webc:type="11ty" 11ty:type="liquid,md">
+  
+# Take control of your URLs with Netlify Redirects
 
-<h2>Try it</h2>
-<p>
-  Netlify allows you to shape how HTTP requests to your sites are routed. By adding configuration to your project you can define redirects, rewrites and proxying rules.
-</p>
-<ol>
-  <li>Add the <code>toml</code> config code below to your <code>netlify.toml</code> file</li>
-  <li>Commit your changes and push your code to trigger a new deploy</li>
-</ol>
 
-<pre>
-<code>
+## Try it
+
+Netlify allows you to shape how HTTP requests to your sites are routed. By adding configuration to your project you can define redirects, rewrites and proxying rules.
+
+
+1. Add the`toml` config code below to your [`netlify.toml`]({{ site.repo }}/blob/main/netlify.toml) file
+1. Commit your changes and push your code to trigger a new deploy
+  
+
+```
 [[redirects]]
   from = "/api/hello"
   to = "/.netlify/functions/hello"
   status = 200
-</code>
-</pre>
+```
+
+</template>

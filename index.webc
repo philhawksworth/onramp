@@ -21,7 +21,7 @@ layout: layouts/base.webc
 
 <ntl-card
   @cardtitle = "3. Netlify Forms"
-  @text = "Use Netlify to automatically process your foprm submissions"
+  @text = "Use Netlify to automatically process your form submissions"
   @id = "feature-forms"
   @url = "/functions/"
   @cta = "Add a form ands start capturing submissions"

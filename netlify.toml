@@ -13,6 +13,11 @@
 #   status = 200
 
 
+
+## Pssst, we're already using Edge Functions on this site, 
+## to detect which features have been deployed and update 
+## the home page accordingly. 
+## But we'll show you how to add your own, too.
 [[edge_functions]]
   path = "/"
   function = "feature-checks"
