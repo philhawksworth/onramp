@@ -12,9 +12,9 @@ export default async (request, context) => {
   const response = await context.next();
 
   // We're only going to to test and update things this is running on Netlify
-  if(await context.ip === "127.0.0.1"){
-    return;
-  }
+  // if(await context.ip === "127.0.0.1"){
+  //   return;
+  // }
   
   
   // Test for the presence of various features, and prepare any
