@@ -7,19 +7,19 @@ export default async function hasForms(context) {
   console.log(`Checking for a form which posts to ${testURL}`);
   
   // 2 second timeout:
-  // const controller = new AbortController()
-  // const timeoutId = setTimeout(() => controller.abort(), 2000)
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), 2000)
   let call;
   try {
     call = await fetch(testURL, {
-      // signal: controller.signal,
+      signal: controller.signal,
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: {
         "form-name": "contact"
       }
     });
-    // clearTimeout(timeoutId);
+    clearTimeout(timeoutId);
     console.log("STATUS", call.status);
     
     if (call.status === 200) {
