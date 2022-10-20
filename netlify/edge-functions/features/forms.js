@@ -2,7 +2,7 @@ const HTMLConfirmation = `<p>You've added a form! Netlify will now accept submis
 
 export default async function hasForms(context) {
 
-  let testURL = `${context.site.url}/`;
+  let testURL = `${context.site.url}/forms/`;
   testURL = testURL.replace('http://','https://');
   console.log(`Checking for a form which posts to ${testURL}`);
   
@@ -15,18 +15,18 @@ export default async function hasForms(context) {
       // signal: controller.signal,
       headers: { "Content-Type": "application/json" },
       method: "POST",
-      body: JSON.stringify({
+      body: {
         "form-name": "contact"
-      })
+      }
     });
     // clearTimeout(timeoutId);
-  } catch {
-    call = {
-      status: 504
+    console.log("STATUS", call.status);
+    
+    if (call.status === 200) {
+      return HTMLConfirmation;
     }
-  }
-  console.log("STATUS", call.status);
-  if (call.status === 200) {
-    return HTMLConfirmation;
+  } catch(err) {
+    console.log(err);
+    return false;
   }
 }

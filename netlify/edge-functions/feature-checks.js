@@ -3,6 +3,7 @@ import { HTMLRewriter } from "https://ghuc.cc/worker-tools/html-rewriter/index.t
 import hasFunctions from "./features/functions.js";
 import hasRedirects from "./features/redirects.js";
 import hasForms from "./features/forms.js";
+import hasSplits from "./features/splittest.js";
 
 
 
@@ -22,6 +23,7 @@ export default async (request, context) => {
   const functionMessage = await hasFunctions(context);
   const redirectsMessage = await hasRedirects(context);
   const formsMessage = await hasForms(context);
+  const splitsMessage = await hasSplits(context);
 
 
 
@@ -47,6 +49,14 @@ export default async (request, context) => {
       element(element) {
         if(formsMessage) {
           element.append(formsMessage, {html: true})
+          element.setAttribute("class", "card feature-deployed");
+        }
+      }
+    })
+    .on("#feature-split-tests", {
+      element(element) {
+        if(splitsMessage) {
+          element.append(splitsMessage, {html: true})
           element.setAttribute("class", "card feature-deployed");
         }
       }

@@ -27,3 +27,18 @@ layout: layouts/base.webc
   @cta = "Add a form ands start capturing submissions"
 ></ntl-card>
 
+<ntl-card
+  @cardtitle = "4. Branch deploys"
+  @text = "Replicate your production environment instantly, by pushing code to a new Git branch"
+  @id = "feature-branch-deploys"
+  @url = "/branch-deploys/"
+  @cta = "Learn how to configure your branch deploys"
+></ntl-card>
+
+<ntl-card
+  @cardtitle = "5. Split testing"
+  @text = "Shape traffic between your branch deploys to perform multi-variant testing with no performance impact to your users"
+  @id = "feature-split-testing"
+  @url = "/split-testing/"
+  @cta = "Start your first Split Test"
+></ntl-card>
