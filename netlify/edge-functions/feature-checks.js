@@ -26,7 +26,7 @@ export default async (request, context) => {
   // confirmation messages we might wish to sub in for the existing content.
   const functionMessage = await hasFunctions(context);
   const redirectsMessage = await hasRedirects(context);
-  const formsMessage = await hasForms(context);
+  // const formsMessage = await hasForms(context);
   const branchMessage = await hasBranches(context);
   const splitsMessage = await hasSplits(context);
 
@@ -50,14 +50,14 @@ export default async (request, context) => {
         }
       }
     })
-    .on("#feature-forms", {
-      element(element) {
-        if(formsMessage) {
-          element.append(formsMessage, {html: true})
-          element.setAttribute("class", "card feature-deployed");
-        }
-      }
-    })
+    // .on("#feature-forms", {
+    //   element(element) {
+    //     if(formsMessage) {
+    //       element.append(formsMessage, {html: true})
+    //       element.setAttribute("class", "card feature-deployed");
+    //     }
+    //   }
+    // })
     .on("#feature-branch-deploys", {
       element(element) {
         if(branchMessage) {
