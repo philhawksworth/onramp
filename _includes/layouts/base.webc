@@ -38,29 +38,37 @@
       min-height: 100vh;
       text-rendering: optimizeSpeed;
       line-height: 1.5;
-      background-color: var(--color-fg);
+      background-color: #111;
       color: var(--color-bg);
       line-height: 1.5;
       font-family: var(--font-family-main);
       font-weight: var(--font-weight-normal);
-      font-size: 19px;
+      font-size: 16px;
       text-align: center;
+      padding:0;
+      margin:0;
     }
-
+    
     .content {
-      max-width: 1000px;
+      background-color: var(--color-fg);
+    }
+    
+    main {
+      max-width: 700px;
       margin:0 auto;
       text-align: left;
-      padding: 3rem;
+      padding: 0 3rem 3rem;
     }
+
 
   </style>
   <style @html="this.getCSS(page.url)"></style>
 </head>
 <body>
   <div class="content">
-    <page-header></page-header>
+    <page-header></page-header>   
     <main @html="this.content"></main>
   </div>
+  <page-footer></page-footer>
 </body>
 </html>

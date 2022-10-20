@@ -1,0 +1,41 @@
+<style webc:scoped>
+
+  footer {
+    border-top: 1px solid #333;
+    font-size:0.8em;
+    color:#999;
+    padding: 3rem 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+  li {
+    line-height: 2;
+  }
+
+  a:link,
+  a:visited {
+    color: #ccc;
+    text-underline-offset: 0.2em;
+    text-decoration-color: #444;
+  }
+  a:hover,
+  a:focus {
+    text-decoration-color: var(--color-teal-T600);
+    color: #fff;
+  }
+
+</style>
+
+
+
+
+<footer>
+  <ul>
+    <li><a href="https://onramp.netlify.app">Get your own version</a> of this site to quickly ramp up on <a href="https://www.netlify.com/">Netlify</a></li>
+    <li>Explore the <a href="https://github.com/philhawksworth/onramp">source code on GitHub</a></li>
+  </ul>
+</footer>
+
+

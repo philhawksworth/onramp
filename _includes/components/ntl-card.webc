@@ -3,10 +3,11 @@
 
   .card {
     font-size: 0.9rem;
-    box-shadow: -2px -2px 12px #1ae6f4a3, 2px 2px 12px #dc41ffa3;
+    box-shadow: -2px -2px 8px #30c8c9, 2px 0px 10px #dc41f3;
     padding: 2rem;
     margin:3rem 0;
-    border-radius: 8px;
+    border: 1px solid #999;
+    border-radius: 5px;
     color:var(--color-bg);
     background:var(--color-fg);
   }
@@ -16,7 +17,7 @@
     --color-fg: #fff;
     background: var(--color-fg);
     color: var(--color-bg);
-    box-shadow: 0 0 12px #ffffffcc;
+    box-shadow: 0 0 8px #ffffffcc;
   }
 
   
@@ -26,7 +27,7 @@
   }
   
   .feature-deployed {
-    box-shadow: -2px -2px 12px #cff68dbd, 2px 2px 12px #029b42a3;
+    box-shadow: -2px -2px 8px #cff68dbd, 2px 0px 10px #029b42a3;
   }
 
   .feature-deployed h1::after {
