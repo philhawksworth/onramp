@@ -60,6 +60,18 @@
       padding: 0 3rem 3rem;
     }
 
+    a:link,
+    a:visited {
+      color: #fff;
+      text-underline-offset: 0.2em;
+      text-decoration-color: #666;
+    }
+    a:hover,
+    a:focus {
+      text-decoration-color: var(--color-teal-T600);
+      color: #fff;
+    }
+
 
   </style>
   <style @html="this.getCSS(page.url)"></style>
