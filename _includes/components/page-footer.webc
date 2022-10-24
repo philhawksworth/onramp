@@ -1,3 +1,14 @@
+<template webc:type="11ty" 11ty:type="liquid,md">
+<footer>
+
+- [Get your own version](https://onramp.netlify.app) of this site to quickly ramp up on [Netlify](https://www.netlify.com/)
+- This site is powered by Netlify and this [GitHub repo]({{ site.repo }})
+- You can also explore the [original repo](https://github.com/philhawksworth/onramp) it was cloned from.
+
+</footer>
+</template>
+
+
 <style webc:scoped>
 
   footer {
@@ -30,14 +41,5 @@
 
 
 
-<template webc:type="11ty" 11ty:type="liquid,md">
-<footer>
-
-- [Get your own version](https://onramp.netlify.app) of this site to quickly ramp up on [Netlify](https://www.netlify.com/)
-- This site is powered by Netlify and this [GitHub repo]({{ site.repo }})
-- You can also explore the [original repo](https://github.com/philhawksworth/onramp) it was cloned from.
-
-</footer>
-</template>
 
 

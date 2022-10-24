@@ -1,3 +1,16 @@
+<template webc:type="11ty" 11ty:type="liquid">
+  <header>
+    <h1><a href="/">Netlify on-ramp</a></h1>
+    <p class="strapline">
+      {{ title }}
+    </p>
+    <p>
+      Explore some of Netlify's features by committing a few changes to this project.
+    </p>
+    <p id="geo" data-geo></p>
+  </header>
+</template>
+
 
 <style webc:scoped>
   header {
@@ -30,17 +43,13 @@
     max-width: 100%;
   }
 
+  .injected {
+    border: solid 1px #666;
+    background: #222;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+  }
+
 
 </style>
 
-<template webc:type="11ty" 11ty:type="liquid">
-  <header>
-    <h1><a href="/">Netlify on-ramp</a></h1>
-    <p class="strapline">
-      {{ title }}
-    </p>
-    <p>
-      Explore some of Netlify's features by committing a few changes to this project.
-    </p>
-  </header>
-</template>

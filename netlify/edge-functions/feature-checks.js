@@ -5,6 +5,7 @@ import hasRedirects from "./features/redirects.js";
 import hasForms from "./features/forms.js";
 import hasBranches from "./features/branchdeploy.js";
 import hasSplits from "./features/splittest.js";
+import hasEdgeFunctions from "./features/edgefunctions.js";
 
 
 
@@ -26,6 +27,7 @@ export default async (request, context) => {
   const formsMessage = await hasForms(context);
   const branchMessage = await hasBranches(context);
   const splitsMessage = await hasSplits(context);
+  const edgeMessage = await hasEdgeFunctions(context);
 
 
 
@@ -67,6 +69,14 @@ export default async (request, context) => {
       element(element) {
         if(splitsMessage) {
           element.append(splitsMessage, {html: true})
+          element.setAttribute("class", "card feature-deployed");
+        }
+      }
+    })
+    .on("#feature-edge-functions", {
+      element(element) {
+        if(edgeMessage) {
+          element.append(edgeMessage, {html: true})
           element.setAttribute("class", "card feature-deployed");
         }
       }

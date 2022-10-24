@@ -9,7 +9,7 @@ layout: layouts/base.webc
 
 <h2>Try it</h2>
 <p>
-  Netlify can autiomatically package and deploy the serverless functions youi include in your porject.
+  Netlify can automatically package and deploy the serverless functions you include in your project.
 </p>
 <ol>
   <li>Add a folder to contain your serverless functions in your porject at <code>/netlify/functions</code></li>

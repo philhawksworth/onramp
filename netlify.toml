@@ -6,14 +6,6 @@
   command = "npx eleventy --watch"
   publish = "dist"
 
-
-# [[redirects]]
-#   from = "/api/hello"
-#   to = "/.netlify/functions/hello"
-#   status = 200
-
-
-
 ## Pssst, we're already using Edge Functions on this site, 
 ## to detect which features have been deployed and update 
 ## the home page accordingly. 
@@ -23,3 +15,13 @@
   function = "feature-checks"
 
 
+## Add more configurations down here. 
+
+# [[redirects]]
+#   from = "/api/hello"
+#   to = "/.netlify/functions/hello"
+#   status = 200
+
+[[edge_functions]]
+  path = "/"
+  function = "geo"

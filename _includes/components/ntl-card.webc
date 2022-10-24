@@ -1,5 +1,14 @@
-<style webc:scoped>
+<template webc:type="11ty">
+  <div class="card" :id="id">
+    <h1 @html="cardtitle"></h1>
+    <div class="description" @html="text"></div>
+    <a :href="url" @html="cta"></a>
+  </div>
+</template>
 
+
+
+<style webc:scoped>
 
   .card {
     font-size: 0.9rem;
@@ -58,10 +67,3 @@
 
 </style>
 
-<template webc:type="11ty">
-  <div class="card" :id="id">
-    <h1 @html="cardtitle"></h1>
-    <div class="description" @html="text"></div>
-    <a :href="url" @html="cta"></a>
-  </div>
-</template>

@@ -3,6 +3,7 @@ title: Push it real good
 layout: layouts/base.webc
 ---
 
+
 <ntl-card
   @cardtitle = "1. Netlify Functions"
   @text = "Create a serverless API with Netlify Functions"
@@ -41,4 +42,12 @@ layout: layouts/base.webc
   @id = "feature-split-testing"
   @url = "/split-testing/"
   @cta = "Start your first Split Test"
+></ntl-card>
+
+<ntl-card
+  @cardtitle = "6. Edge Functions"
+  @text = "Intercept and modify HTTP requests on-the-fly with low latency serverless functions running on the edhge of the CDN."
+  @id = "feature-edge-functions"
+  @url = "/edge-functions/"
+  @cta = "Deploy your first Edge Function"
 ></ntl-card>
