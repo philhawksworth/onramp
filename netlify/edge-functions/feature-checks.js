@@ -3,8 +3,8 @@ import { HTMLRewriter } from "https://ghuc.cc/worker-tools/html-rewriter/index.t
 import hasFunctions from "./features/functions.js";
 import hasRedirects from "./features/redirects.js";
 // import hasForms from "./features/forms.js";
-import hasBranches from "./features/branchdeploy.js";
-import hasSplits from "./features/splittest.js";
+// import hasBranches from "./features/branchdeploy.js";
+// import hasSplits from "./features/splittest.js";
 import hasEdgeFunctions from "./features/edgefunctions.js";
 
 
@@ -25,8 +25,8 @@ export default async (request, context) => {
   const functionMessage = await hasFunctions(context);
   const redirectsMessage = await hasRedirects(context);
   // const formsMessage = await hasForms(context);
-  const branchMessage = await hasBranches(context);
-  const splitsMessage = await hasSplits(context);
+  // const branchMessage = await hasBranches(context);
+  // const splitsMessage = await hasSplits(context);
   const edgeMessage = await hasEdgeFunctions(context);
 
 
@@ -57,22 +57,22 @@ export default async (request, context) => {
     //     }
     //   }
     // })
-    .on("#feature-branch-deploys", {
-      element(element) {
-        if(branchMessage) {
-          element.append(branchMessage, {html: true})
-          element.setAttribute("class", "card feature-deployed");
-        }
-      }
-    })
-    .on("#feature-split-testing", {
-      element(element) {
-        if(splitsMessage) {
-          element.append(splitsMessage, {html: true})
-          element.setAttribute("class", "card feature-deployed");
-        }
-      }
-    })
+    // .on("#feature-branch-deploys", {
+    //   element(element) {
+    //     if(branchMessage) {
+    //       element.append(branchMessage, {html: true})
+    //       element.setAttribute("class", "card feature-deployed");
+    //     }
+    //   }
+    // })
+    // .on("#feature-split-testing", {
+    //   element(element) {
+    //     if(splitsMessage) {
+    //       element.append(splitsMessage, {html: true})
+    //       element.setAttribute("class", "card feature-deployed");
+    //     }
+    //   }
+    // })
     .on("#feature-edge-functions", {
       element(element) {
         if(edgeMessage) {
